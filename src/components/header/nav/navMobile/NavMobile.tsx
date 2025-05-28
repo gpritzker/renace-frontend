@@ -1,5 +1,4 @@
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
-import { IMenu } from '@/interface/IMenu'
 import { cn } from '@/lib/utils'
 import {
   Accordion,
@@ -12,7 +11,7 @@ import { Separator } from '@/components/ui/separator'
 import { Settings } from 'lucide-react'
 
 interface Props {
-  menu: IMenu[]
+  menu: any[]
 }
 
 const levelStyles: string[] = [
@@ -21,10 +20,10 @@ const levelStyles: string[] = [
   'text-gray-400 pl-8'
 ]
 export const NavMobile = ({ menu }: Props) => {
-  const hasChilds = (childs: IMenu[]) => {
+  const hasChilds = (childs: any[]) => {
     return childs.length > 0
   }
-  const renderMenu = (items: IMenu[], level: number = 0) => {
+  const renderMenu = (items: any[], level: number = 0) => {
     return (
       <ul>
         {items.map((item) => (
